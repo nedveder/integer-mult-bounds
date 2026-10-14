@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 2,
+  "base_commit": "ddb4371c16a5a5de9e363afa8c0d6d7c27429e3c",
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Can one selected pricing or assembly claim be checked by a genuinely independent exact implementation?",
+    "starting_points": [
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Reconstruct the rank ledger from original operations rather than trusting its aggregate.",
+      "Implement certified moment inequalities through a different exact enclosure method."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Record the selected certificate and complex_profile rather than taking a PR headline as input.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Recompute one small part of the ledger or one certified enclosure using an independent implementation.",
+    "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+    "allowed_variations": [
+      "Reconstruct either a source ledger or a numeric enclosure with a different method."
+    ],
+    "scope_change_triggers": [
+      "Importing the primary function and calling its output independent verification."
+    ],
+    "overlap_terms": [
+      "independent moment",
+      "rank histogram",
+      "exact enclosure"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Donor-assigned simplicity objective: define an Occam (simplicity/elegance) metric for a certified composition and find a strictly simpler construction with kappa at least the selected value. The independent part is an exact re-derivation of both bit suppliers' c from their words and of the selected 47-constraint outer assembly.",
+  "scope_change_reason": "The donor asked to optimize simplicity at fixed-or-better kappa instead of the bound itself. The card's independent exact pricing is the tool used to prove kappa invariance; the new question is which parts of the selected construction pay rent in kappa.",
+  "bottleneck_link": "Side result for the bottleneck: kappa = a/(1+a) with a = min(bit, complex), so effort on the non-binding supplier buys nothing. The ledger measures that waste (bit headroom 3.44%, 0.0216% of it bought by PR589 tuning) and shows the description cost is dominated 250:1 by the complex owner map, which directs simplification and review effort.",
+  "budget_minutes": 120,
+  "stop_rule": "Stop at the first strictly Occam-simpler composition with exactly equal kappa and all inherited checks, or record which searched/frozen components are load-bearing; do not lower kappa (the conservative surcharge model, -2.85e-12, is reported, not taken).",
+  "outcome": "completed",
+  "evidence": "verify.py (3 s, stdlib): reproduces all 47 selected outer constraint values exactly with PR589 c and gets identical kappa 0.001672660197076918 and constraints with PR555 c; both words replayed exactly and both c values re-derived by two exact engines. regenerate.py (19 s, numpy): searched-parameter rent controls. Cold replay of research/e8-bit-p111/verify.sh on this base (Python 3.13.16, g++ 13.3, Boost 1.83): PASS in 387 s, nine-stage c 0.001733052823330162099157, H1-H5 lemma and all controls.",
+  "author": "nedveder (Nadav Leder), with Claude Code assistance",
+  "ai_assistance": "Claude Code (Anthropic), agentic: repository exploration, experiment design, verifier code and write-up; reviewed by the account owner.",
+  "open_questions": [
+    {
+      "question": "Can the complex owner map (69,120 roles, about 6.6 Mbit DEFLATE, about 98% of the frozen description) be replaced by a short structured rule with the same idle profile?",
+      "why_it_matters": "It is where nearly all Occam length lives; a rule-generated witness with an equal profile keeps kappa exactly and makes the construction reviewable.",
+      "first_step": "Measure conditional structure (replica/stage periodicity; family is a function of (child, copy) and port of copy) and try a deterministic first-fit owner rule on the T16 window geometry, checking only the profile first.",
+      "blocked_by": "The strict T16 admission needs the PR1018/PR1005 local replay chain; a profile match alone is not admission."
+    },
+    {
+      "question": "Can the 3.44% bit headroom buy removal of the H1-H5 interleaved-interface obligation?",
+      "why_it_matters": "An H1-H5-free bit word with nine-stage c above 0.0016754627 would drop a named conditional premise at unchanged kappa.",
+      "first_step": "Price PR545's punctured R489 word (passes PR493's interface) at nine stages with banks, since R = 489 exceeds the R <= 4v whole-hosting wall.",
+      "blocked_by": "The parameterised nine-stage chain hosts residuals whole only (no bank path for R > 4v)."
+    },
+    {
+      "question": "Does a canonical (search-free) PR555 plan seed give a word that re-hosts and still clears the complex threshold?",
+      "why_it_matters": "Removes the searched seed/receiver parameters from the bit description.",
+      "first_step": "Seed 552 with default receivers gives R = 442 <= 444: rediscover its nine-stage hosting and price it.",
+      "blocked_by": "Needs the hosting rediscovery (#442 programme) for a new word; not run here."
+    }
+  ]
+}

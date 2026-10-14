@@ -1,0 +1,185 @@
+{
+ "bit_threshold_c": "67018507072324140916999932981492927675859083/40000000000000000000000000000000000000000000000",
+ "complex_b": "67018507072324140917/40000000000000000000000",
+ "complex_top_layer": {
+  "canonical_bytes": 9490572,
+  "deflate_bits": 6710736,
+  "files": [
+   {
+    "canonical_bytes": 9208195,
+    "deflate_bits": 6580352,
+    "path": "research/complex-t16-rare-pattern-exchanges/data/OWNERS.json.gz"
+   },
+   {
+    "canonical_bytes": 213870,
+    "deflate_bits": 53808,
+    "path": "research/complex-t16-rare-pattern-exchanges/data/PLAN.json"
+   },
+   {
+    "canonical_bytes": 9443,
+    "deflate_bits": 21824,
+    "path": "research/complex-t16-rare-pattern-exchanges/data/SPEC.json"
+   },
+   {
+    "canonical_bytes": 59064,
+    "deflate_bits": 44184,
+    "path": "research/complex-t16-rare-pattern-exchanges/MOVES.json"
+   }
+  ]
+ },
+ "frozen_inputs": {
+  "PR555": {
+   "canonical_bytes": 10489,
+   "deflate_bits": 26176,
+   "files": [
+    {
+     "canonical_bytes": 9906,
+     "deflate_bits": 22592,
+     "path": "research/e8-bit-p111/data/plan-l3.json"
+    },
+    {
+     "canonical_bytes": 583,
+     "deflate_bits": 3000,
+     "path": "research/e8-bit-p111/data/punct.json"
+    }
+   ]
+  },
+  "PR589": {
+   "canonical_bytes": 11808,
+   "deflate_bits": 31128,
+   "files": [
+    {
+     "canonical_bytes": 9906,
+     "deflate_bits": 22592,
+     "path": "research/e8-bit-p111/data/plan-l3.json"
+    },
+    {
+     "canonical_bytes": 583,
+     "deflate_bits": 3000,
+     "path": "research/e8-bit-p111/data/punct.json"
+    },
+    {
+     "canonical_bytes": 1319,
+     "deflate_bits": 5056,
+     "path": "research/e8-bit-p111-tuned/tune/moves.json"
+    }
+   ]
+  }
+ },
+ "generator_code": {
+  "PR555": {
+   "bytes": 27493,
+   "files": [
+    "research/e8-bit-p111/code/gen_p3.py",
+    "research/e8-bit-p111/code/nodeopt.py",
+    "research/e8-bit-p111/code/pwordl.py",
+    "research/e8-bit-p111/code/planio.py"
+   ]
+  },
+  "PR589": {
+   "bytes": 33243,
+   "files": [
+    "research/e8-bit-p111/code/gen_p3.py",
+    "research/e8-bit-p111/code/nodeopt.py",
+    "research/e8-bit-p111/code/pwordl.py",
+    "research/e8-bit-p111/code/planio.py",
+    "research/e8-bit-p111-tuned/tune/apply.py",
+    "research/e8-bit-p111-tuned/tune/wlib.py"
+   ]
+  }
+ },
+ "kappa": "836330098538459/500000000000000000",
+ "rent": {
+  "PR555_punctured_star": {
+   "control": "PR543 R420 c",
+   "kappa_change": "-21563836651023/1000000000000000000"
+  },
+  "PR559_native_correction": {
+   "kappa_change": "-285191/100000000000000000",
+   "note": "conservative surcharge model; cited from ASSEMBLY.json"
+  },
+  "PR589_tuning": {
+   "binding": "complex",
+   "kappa_change": "0"
+  }
+ },
+ "schema": "occam-ledger/1",
+ "searched_parameters": {
+  "PR555": {
+   "block_node_lu_trials": "pays rent in gates only: 1 trial keeps the paid profile, +298 gates",
+   "thirds_seed_and_receivers": "bound to the frozen hosting: seeds 0/1/2 give R = 446/448/446 > 4v = 444; seed 552 with default receivers gives R = 442 and another rank mass"
+  },
+  "PR589": {
+   "tuning_search": "zero kappa rent: two moves raise the non-binding c by 0.0216%, +4 gates"
+  }
+ },
+ "suppliers": {
+  "PR555": {
+   "c": "1733052823330162099157/1000000000000000000000000",
+   "circuit": {
+    "R": 439,
+    "frames_used": 636,
+    "gates": {
+     "A": 2073,
+     "B": 712,
+     "C": 2572,
+     "D": 111
+    },
+    "registers": 661,
+    "summands": {
+     "A": 2130,
+     "B": 934,
+     "C": 2629,
+     "D": 18085
+    },
+    "total_gates": 5468,
+    "total_summands": 23778,
+    "v": 111
+   },
+   "headroom_over_threshold": "0.034372682",
+   "local_paid_profile": {
+    "1": 1321,
+    "2": 1342,
+    "3": 80,
+    "4": 47,
+    "5": 102,
+    "6": 10,
+    "7": 18
+   }
+  },
+  "PR589": {
+   "c": "1733427039589844234749/1000000000000000000000000",
+   "circuit": {
+    "R": 439,
+    "frames_used": 636,
+    "gates": {
+     "A": 2075,
+     "B": 712,
+     "C": 2574,
+     "D": 111
+    },
+    "registers": 661,
+    "summands": {
+     "A": 2130,
+     "B": 934,
+     "C": 2629,
+     "D": 18085
+    },
+    "total_gates": 5472,
+    "total_summands": 23778,
+    "v": 111
+   },
+   "headroom_over_threshold": "0.034596033",
+   "local_paid_profile": {
+    "1": 1323,
+    "2": 1342,
+    "3": 79,
+    "4": 44,
+    "5": 102,
+    "6": 11,
+    "7": 19
+   }
+  }
+ },
+ "zlib_runtime": "1.3"
+}

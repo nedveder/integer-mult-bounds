@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [
+    "numpy==2.5.3"
+  ],
+  "inputs": [
+    "certificates/selected-result.json",
+    "research/community-frontier1094-audit/ASSEMBLY.json",
+    "research/complex-k492-owner-repair/vendor/multicold/engines/base_two_moment.py",
+    "research/complex-k492-owner-repair/vendor/multicold/engines/moment.py",
+    "research/complex-k492-owner-repair/vendor/multicold/engines/outer.py",
+    "research/complex-rank5-pivots8/inputs/PR543-EXPECTED.json",
+    "research/complex-t16-rare-pattern-exchanges/MOVES.json",
+    "research/complex-t16-rare-pattern-exchanges/PROFILE.json",
+    "research/complex-t16-rare-pattern-exchanges/data/OWNERS.json.gz",
+    "research/complex-t16-rare-pattern-exchanges/data/PLAN.json",
+    "research/complex-t16-rare-pattern-exchanges/data/SPEC.json",
+    "research/e8-bit-carrier-skeleton/code/skeleton/e8.py",
+    "research/e8-bit-carrier-skeleton/code/skeleton/gen.py",
+    "research/e8-bit-carrier-skeleton/code/skeleton/geom.py",
+    "research/e8-bit-carrier-skeleton/code/skeleton/wordkit.py",
+    "research/e8-bit-carrier-skeleton/data/skeleton/d4part-pairs.json",
+    "research/e8-bit-p111-tuned/tune/EXPECTED.json",
+    "research/e8-bit-p111-tuned/tune/apply.py",
+    "research/e8-bit-p111-tuned/tune/bitE8mut-p111-tuned.json.gz",
+    "research/e8-bit-p111-tuned/tune/moves.json",
+    "research/e8-bit-p111-tuned/tune/wlib.py",
+    "research/e8-bit-p111/EXPECTED.json",
+    "research/e8-bit-p111/code/gen_p3.py",
+    "research/e8-bit-p111/code/nodeopt.py",
+    "research/e8-bit-p111/code/planio.py",
+    "research/e8-bit-p111/code/pwordl.py",
+    "research/e8-bit-p111/data/bitE8mut-p111.json.gz",
+    "research/e8-bit-p111/data/plan-l3.json",
+    "research/e8-bit-p111/data/punct.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Selected record/certificate/engine pins; complex b re-rooted; both bit words replayed exactly (F2 endpoint, nesting), local -> hosted profile -> c reproduced for PR555 and PR589 by both exact engines with surcharge; positive control reproduces all 47 selected outer constraint values with PR589 c; PR555 c gives identical kappa and constraints; failure controls: PR543 c lowers kappa (bit binds), one-unit profile mutation breaks the mass identity, next kappa grid rejected; OCCAM.json recomputed and compared (DEFLATE sizes informational across zlib versions)."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/regenerate.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Shipped PR555 parameters rebuild the shipped word (content hash); one block-node LU trial keeps the paid profile but adds 149 B + 149 C gates; canonical plan seeds 0/1/2 exceed the R <= 4v = 444 hosting wall and seed 552 with default receivers changes R and rank mass (controls showing which searched parameters are bound to the frozen hosting)."
+    }
+  ]
+}
